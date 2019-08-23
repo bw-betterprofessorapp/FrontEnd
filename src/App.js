@@ -1,7 +1,7 @@
 import React from "react";
-import TabNav from "./components/TabNav.js.js";
-import Header from "./components/Header.js.js";
-import AppRouter from "./components/AppRouter.js.js";
+import TabNav from "./components/TabNav.js";
+import Header from "./components/Header.js";
+import StudentForm from "./components/StudentForm.js";
 
 export default function App() {
   return (
@@ -13,4 +13,3 @@ export default function App() {
   );
 }
 
-export default App;
