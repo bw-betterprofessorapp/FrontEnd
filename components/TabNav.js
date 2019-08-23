@@ -9,7 +9,7 @@ export default function TabNav() {
     render: () => <Tab.Pane>Students</Tab.Pane>,
   },
   { menuItem: {key: 'messages', icon: '', content: 'Messaging' },
-    render: () => <Tab.Pane>Messaging</Tab.Pane>,
+    render: () => <Tab.Pane>Characters Content</Tab.Pane>,
   },
 
 ];
