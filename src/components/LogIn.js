@@ -106,6 +106,10 @@ const FormikLogInForm = withFormik({
         console.log("HTTP POST Response: ", res);
         setStatus(res.data);
         resetForm();
+      })
+      .catch(err => {
+        console.log('ERROR: ', err);
+        resetForm();
       });
   }
 })(LogIn);
