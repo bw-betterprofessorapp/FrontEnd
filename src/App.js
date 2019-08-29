@@ -3,6 +3,9 @@ import './App.css';
 import { Container, Header } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom'
 import AppRouter from './components/AppRouter'
+import TabNav from "./components/TabNav.js";
+import Header from "./components/Header.js";
+import StudentForm from "./components/StudentForm.js";
 
 function App() {
   return (
@@ -24,6 +27,10 @@ function App() {
                 <NavLink to='/login' style={{textDecoration: 'none', color: '#c42847', fontSize: '1.3rem', margin: '5px'}}>Log In</NavLink>
                 <NavLink to='/signup' style={{textDecoration: 'none', color: '#c42847', fontSize: '1.3rem', margin: '5px'}}>Sign Up</NavLink>
             </Container>
+            <main>
+      <Header />
+      <TabNav />
+    </main>
       <AppRouter />
     </Container>
   );
