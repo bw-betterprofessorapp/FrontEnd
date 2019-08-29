@@ -3,7 +3,7 @@ import { Card, Image, Container } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 import "../App.css";
 
- const StudentList = props => {
+const StudentList = props => {
   return (
     <Container className="studentlist-container">
       {props.students[0] &&
@@ -39,4 +39,4 @@ import "../App.css";
   );
 };
 
- export default StudentList;
+export default StudentList;
