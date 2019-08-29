@@ -3,7 +3,7 @@ import { Form, Button, Header, Container } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
 import "../App.css";
 
- const StudentForm = props => {
+const StudentForm = props => {
   const changeHandler = e => {
     props.fieldState[1]({
       ...props.fieldState[0],
@@ -11,12 +11,12 @@ import "../App.css";
     });
   };
 
-   const submitForm = event => {
+  const submitForm = event => {
     event.preventDefault();
 
-     const newStudent = props.fieldState[0];
+    const newStudent = props.fieldState[0];
 
-     props.fieldState[0].name === "" ||
+    props.fieldState[0].name === "" ||
     props.fieldState[0].class === "" ||
     props.fieldState[0].project === "" ||
     props.fieldState[0].paper === ""
@@ -24,7 +24,7 @@ import "../App.css";
       : props.createNewStudent(newStudent);
   };
 
-   return (
+  return (
     <Form onSubmit={event => submitForm(event)}>
       <Container>
         <Header>Add A New Student</Header>
