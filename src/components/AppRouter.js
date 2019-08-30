@@ -7,6 +7,29 @@ import LandingPage from "./LandingPage";
 
 export default function AppRouter() {
 
+<<<<<<< HEAD
+=======
+  const PrivateRouter = ({ component: Component, ...rest }) => (
+    <Route
+      {...rest}
+      render={props =>
+        localStorage.getItem('token') ? (
+          <Component {...props} />
+        ) : (
+          <Redirect to='/login' />
+        )
+      }
+    />
+  );
+
+       <Route 
+        path="/messages" 
+        render={props => <Messanger {...props} />}
+      />
+
+
+
+>>>>>>> origin/master
   return (
     <Container className="app-router">
       <Switch>
