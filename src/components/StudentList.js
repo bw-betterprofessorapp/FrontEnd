@@ -41,6 +41,7 @@ function StudentList() {
     setnewStudents([...newStudents][idx] = updatedStudent );
   }
 
+const StudentList = props => {
   return (
     <div className="StudentList">
     <h1>Students</h1>
