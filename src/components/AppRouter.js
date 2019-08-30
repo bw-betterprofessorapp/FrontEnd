@@ -20,7 +20,7 @@ export default function AppRouter() {
         <Route 
         path="/messages" 
         render={props => <Messanger {...props} />}
-      />
+      /> 
       </Switch>
     </Container>
   );
