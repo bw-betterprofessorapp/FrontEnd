@@ -50,15 +50,6 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-<<<<<<< HEAD
-=======
-/*
-.main-img {
-  display: block;
-  border-radius: 100%;
-  margin: 0 auto;
-} */
->>>>>>> 5caee7e0de1a4156bfdaed21b9851f0dde0ca2d1
 
 header h1 {
   text-align: center;
@@ -70,7 +61,6 @@ header h1 {
 
 #root > main > div > div.ui.attached.tabular.menu > a.active.item {
   background: #fbf5f3;
-<<<<<<< HEAD
 }
 
 ::before,
@@ -178,6 +168,3 @@ body {
         font-size: 1.7rem;
         line-height: 1;
       }
-=======
-}
->>>>>>> 5caee7e0de1a4156bfdaed21b9851f0dde0ca2d1
