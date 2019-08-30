@@ -191,6 +191,7 @@ const FormikLogInForm = withFormik({
       .then(res => {
         console.log("HTTP POST Response: ", res);
         setStatus(res.data);
+        localStorage.setItem(res.data.username, res.data.token)
         resetForm();
       })
       .catch(err => {

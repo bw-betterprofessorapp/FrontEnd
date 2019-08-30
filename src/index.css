@@ -15,12 +15,21 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+a {
+  color: #000022;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e28413;
+}
+
 main {
   width: 85vw;
   min-height: 80vh;
   max-width: 1024px;
   margin: 35px auto;
-  background: #fff;
+  background: #de3c4b;
   padding: 15px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
@@ -48,4 +57,118 @@ main {
 header h1 {
   text-align: center;
 }
+
+#root > main > div > div.ui.bottom.attached.segment.active.tab {
+  background: #fbf5f3;
+}
+
+#root > main > div > div.ui.attached.tabular.menu > a.active.item {
+  background: #fbf5f3;
+}
+
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Lato sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.chat {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 90vh 10vh;
+}
+
+.sidebar {
+  background-color: #c42847;
+  color: #fff;
+  padding-left: 4rem;
+  padding-top: 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.input {
+
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  align-items: center;
+}
+
+.input__input {
+  flex: 1 1 60%;
+  height: 5rem;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  border: 1px solid #000022;
+  border-radius: 3px;
+  margin-right: .5rem;
+}
+
+#root > main > div > div.ui.bottom.attached.segment.active.tab > div > div > div.chat > form > button {
+    flex: 0 0 10rem;
+    background-color: #de3c4b;
+    border: none;
+    border-radius: 3px;
+    height: 5rem;
+    color: #fff;
+    font-size: 1.7rem;
+  }
+
+  #root > main > div > div.ui.bottom.attached.segment.active.tab > div > div > div.chat > form > button:hover {
+      background-color: #c42847;
+    }
+  
+    .message {
+      padding: 0 1rem;
+      margin: 1.5rem 0;
+      display: flex;
+    }
+
+    .message__pic {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+      }
+    
+    .message__text {
+        display: flex;
+        flex-flow: column;
+        margin-left: 1rem;
+        justify-content: space-around;
+      }
+    
+    .message__meta {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 1.3rem;
+        line-height: 1;
+      }
+    
+    .message__username {
+        font-weight: bold;
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        margin-right: 1rem;
+      }
+    
+    .message__date {
+        text-transform: uppercase;
+        color: #888;
+      }
+    
+    .message__content {
+        font-size: 1.7rem;
+        line-height: 1;
+      }
 

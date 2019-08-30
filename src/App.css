@@ -57,28 +57,3 @@ button{
 .error{
   color: red;
   font-size: 0.8rem;
-}
-  
-form {
-  width: 80%;
-  background-color: #000022;
-  padding: 10px;
-  margin: 15px auto;
-  border-radius: 5px;
-}
-
- .form-fields {
-  display: flex !important;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
- form .field {
-  width: 40%;
-  margin: 0 5% 15px !important;
-}
-
- form button {
-  margin: 25px auto 10px !important;
-  width: 30%;
-}

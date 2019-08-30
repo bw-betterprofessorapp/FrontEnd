@@ -1,75 +1,92 @@
-import React from "react";
-import { Form, Button, Header, Container } from "semantic-ui-react";
-import "semantic-ui-css/semantic.min.css";
-import "../App.css";
+import React, { useState, useEffect } from 'react';
 
-const StudentForm = props => {
-  const changeHandler = e => {
-    props.fieldState[1]({
-      ...props.fieldState[0],
-      [e.target.name]: e.target.value
-    });
-  };
+ function StudentForm(props) {
 
-  const submitForm = event => {
+    // Keep track of and update the student
+   const [ newStudent, setNewStudent ] = useState({
+    id: "",
+    firstname: "",
+    lastname: "",
+    email: "",
+  });
+
+    // Runs when form is submitted (button click)
+    const handleSubmit = (event) => {
+    // Prevent browser refresh
     event.preventDefault();
 
-    const newStudent = props.fieldState[0];
-
-    props.fieldState[0].name === "" ||
-    props.fieldState[0].class === "" ||
-    props.fieldState[0].project === "" ||
-    props.fieldState[0].paper === ""
-      ? alert("All fields are required.")
-      : props.createNewStudent(newStudent);
+    //Check if studentToEdit has props
+    if( props.studentToEdit.name ) {
+      props.editStudent(newStudent);
+    } else {
+    // Add the newStudent object in state to our list of students  
+    props.addNewStudent(newStudent);
+  }
+    
+    // Clear the input values
+    setNewStudent({
+    id: "",
+    firstname: "",
+    lastname: "",
+    email: "",
+    })
   };
 
-  return (
-    <Form onSubmit={event => submitForm(event)}>
-      <Container>
-        <Header>Add A New Student</Header>
-      </Container>
-      <Container className="form-fields">
-        <Form.Field>
-          <label>Name</label>
-          <input
-            type="text"
-            placeholder="Name"
-            name="name"
-            value={props.fieldState[0].name}
-            onChange={event => changeHandler(event)}
-          />
-        </Form.Field>
-        <Form.Field>
-          <label>Class</label>
-          <input
-            placeholder="Class"
-            name="class"
-            value={props.fieldState[0].class}
-            onChange={event => changeHandler(event)}
-          />
-        </Form.Field>
-        <Form.Field>
-          <label>Project</label>
-          <input
-            placeholder="Project"
-            name="project"
-            value={props.fieldState[0].project}
-            onChange={event => changeHandler(event)}
-          />
-        </Form.Field>
-        <Form.Field>
-          <label>Paper</label>
-          <input
-            placeholder="Paper"
-            name="paper"
-            value={props.fieldState[0].paper}
-            onChange={event => changeHandler(event)}
-          />
-        </Form.Field>
-        <Button type="submit">Submit</Button>
-      </Container>
-    </Form>
+    // Runs whenever theres a change event on our input elements
+    const handleChange = event => {
+    // Copy the current newStudent object in state and update the correct
+    // property with the input value
+    setNewStudent({...newStudent, [event.target.name]: event.target.value}); 
+  };
+
+    // When props.studentToEdit changes, update newStudent state object
+    // with the correct data
+    useEffect(() => {
+      setNewStudent(props.studentToEdit);
+  }, [props.studentToEdit])
+
+   return (
+    <form onSubmit={handleSubmit}>
+      <h2>Add a New Student</h2>
+      <label htmlFor="id" hidden>ID</label>
+      <input
+        type="text" 
+        name="id" 
+        placeholder="ID"
+        value={newStudent.id}
+        onChange={handleChange}
+      />
+
+      <label htmlFor="firstname" hidden>First Name</label>
+      <input
+        type="text" 
+        name="firstname" 
+        placeholder="FirstName"
+        value={newStudent.firstname}
+        onChange={handleChange}
+      />
+
+      <label htmlFor="lastname" hidden>Last Name</label>
+      <input
+        type="text" 
+        name="lastname" 
+        placeholder="LastName"
+        value={newStudent.lastname}
+        onChange={handleChange}
+      />
+
+      <label htmlFor="email" hidden>Email</label>
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Email" 
+        value={newStudent.email}
+        onChange={handleChange} 
+      />
+      <button type="submit">Submit</button>
+    </form>
   );
-};
+}
+
+
 export default StudentForm;
