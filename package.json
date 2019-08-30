@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "moment": "^2.24.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -11,6 +12,24 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.0",
     "uuid": "^3.3.3"
+=======
+    "@material-ui/core": "^4.3.3",
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
+    "formik": "^1.5.8",
+    "package-lock": "^1.0.0",
+    "react": "^16.9.0",
+    "react-bootstrap": "^1.0.0-beta.12",
+    "react-dom": "^16.9.0",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.1.1",
+    "react-skylight": "^0.5.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.0",
+    "styled-components": "^4.3.2",
+    "yarn": "^1.17.3",
+    "yup": "^0.27.0"
+>>>>>>> 5caee7e0de1a4156bfdaed21b9851f0dde0ca2d1
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,5 +51,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
+=======
+  },
+  "devDependencies": {
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+>>>>>>> 5caee7e0de1a4156bfdaed21b9851f0dde0ca2d1
   }
 }
