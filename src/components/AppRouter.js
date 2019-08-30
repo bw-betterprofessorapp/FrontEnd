@@ -20,7 +20,7 @@ export default function AppRouter() {
         )
       }
     />
-  )
+  );
 
        <Route 
         path="/messages" 
@@ -28,7 +28,7 @@ export default function AppRouter() {
       />
 
 
-    </div>
+
   return (
     <Container className="app-router">
       <Switch>
