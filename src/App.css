@@ -31,3 +31,29 @@
     transform: rotate(360deg);
   }
 }
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-image: url('https://unsplash.com/photos/26MJGnCM0Wc');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+label{
+  color: #000022;
+  margin: 5px 0;
+}
+
+button{
+  width: 100px;
+  color: #fbf5f3;
+  background-color: #de3c4b;
+  border-radius: 10px;
+  height: 40px;
+  font-size: 1rem;
+}
+
+.error{
+  color: red;
+  font-size: 0.8rem;

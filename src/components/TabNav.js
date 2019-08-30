@@ -28,8 +28,6 @@ render: () => <Tab.Pane><AppRouter /></Tab.Pane>
 }
 ];
 
- export default function TabNav() {
-  return (
-    <Tab panes={panes} />
-  )
-};
+export default function TabNav() {
+  return <Tab panes={panes} />;
+}
