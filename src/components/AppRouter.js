@@ -1,4 +1,6 @@
 import React from "react";
+import StudentList from "./StudentList.js";
+import Messanger from "./Messanger.js";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { Container } from "semantic-ui-react";
 import FormikLogInForm from "./LogIn";
@@ -20,6 +22,13 @@ export default function AppRouter() {
     />
   )
 
+       <Route 
+        path="/messages" 
+        render={props => <Messanger {...props} />}
+      />
+
+
+    </div>
   return (
     <Container className="app-router">
       <Switch>

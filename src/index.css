@@ -47,12 +47,6 @@ main {
 .grid-view div.card.ui {
   margin: 1.25rem;
 }
-/*
-.main-img {
-  display: block;
-  border-radius: 100%;
-  margin: 0 auto;
-} */
 
 header h1 {
   text-align: center;
@@ -171,4 +165,3 @@ body {
         font-size: 1.7rem;
         line-height: 1;
       }
-
