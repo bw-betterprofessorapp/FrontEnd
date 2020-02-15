@@ -19,7 +19,7 @@
     "semantic-ui-react": "^0.88.0",
     "styled-components": "^4.3.2",
     "uuid": "^3.3.3",
-    "yarn": "^1.17.3",
+    "yarn": "^1.22.0",
     "yup": "^0.27.0"
   },
   "scripts": {
